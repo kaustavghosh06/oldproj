@@ -14,6 +14,9 @@
     "frontend-ios": {
       "enablexcodeintegration": true
     },
+    "project": {
+      "overrides": true
+    },
     "auth": {
       "enablecaseinsensitivity": true,
       "useinclusiveterminology": true,
