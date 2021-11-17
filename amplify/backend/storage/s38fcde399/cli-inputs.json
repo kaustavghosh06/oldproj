@@ -1,0 +1,11 @@
+{
+  "resourceName": "s38fcde399",
+  "bucketName": "oldproj923d09b31b7344c893eefef0098b7843",
+  "policyUUID": "c133b4fe",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE"
+  ],
+  "triggerFunction": "NONE"
+}
