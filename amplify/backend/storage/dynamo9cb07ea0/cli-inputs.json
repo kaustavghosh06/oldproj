@@ -1,0 +1,14 @@
+{
+  "resourceName": "dynamo9cb07ea0",
+  "tableName": "dynamo9cb07ea0",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "name",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

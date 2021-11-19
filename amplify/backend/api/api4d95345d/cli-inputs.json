@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "paths": {
+    "/xyz": {
+      "name": "/xyz",
+      "lambdaFunction": "oldproja8355a17",
+      "permissions": {
+        "setting": "protected",
+        "auth": [
+          "create",
+          "read",
+          "update"
+        ],
+        "unauth": [
+          "create",
+          "read",
+          "update"
+        ]
+      }
+    },
+    "/issdfsdfdsf": {
+      "name": "/issdfsdfdsf",
+      "lambdaFunction": "oldproj2eb6b2ba",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read"
+        ]
+      }
+    }
+  }
+}

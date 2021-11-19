@@ -29,23 +29,110 @@
     "s38fcde399": {
       "service": "S3",
       "providerPlugin": "awscloudformation"
+    },
+    "dynamo9cb07ea0": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
     }
   },
   "api": {
+    "api4d95345d": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "oldproja8355a17",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        },
+        {
+          "category": "function",
+          "resourceName": "oldproj2eb6b2ba",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    },
     "oldproj": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
         "authConfig": {
           "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "autholdprojbe1a78dc"
             }
           },
-          "additionalAuthenticationProviders": []
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "API_KEY",
+              "apiKeyConfig": {
+                "apiKeyExpirationDays": 7,
+                "apiKeyExpirationDate": "2021-11-26T19:20:16.548Z",
+                "description": "fgfdg"
+              }
+            },
+            {
+              "authenticationType": "AWS_IAM"
+            },
+            {
+              "authenticationType": "OPENID_CONNECT",
+              "openIDConnectConfig": {
+                "name": "ffgfdgdfg",
+                "issuerUrl": "https://google.com/",
+                "clientId": "sadasdsa",
+                "authTTL": "34",
+                "iatTTL": "34"
+              }
+            }
+          ]
         }
       }
+    }
+  },
+  "function": {
+    "oldproja8355a17": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "oldprojbe1a78dc",
+          "attributes": [
+            "UserPoolId"
+          ]
+        }
+      ]
+    },
+    "oldproj2eb6b2ba": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "oldprojbe1a78dc",
+          "attributes": [
+            "UserPoolId"
+          ]
+        },
+        {
+          "category": "storage",
+          "resourceName": "dynamo9cb07ea0",
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ]
+        }
+      ]
     }
   }
 }

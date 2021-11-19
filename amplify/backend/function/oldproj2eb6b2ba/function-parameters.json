@@ -1,0 +1,18 @@
+{
+  "lambdaLayers": [],
+  "permissions": {
+    "auth": {
+      "oldprojbe1a78dc": [
+        "create"
+      ]
+    },
+    "storage": {
+      "dynamo9cb07ea0": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  }
+}

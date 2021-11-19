@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "oldproj",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/kaustavg/oldproj/amplify/backend/api/oldproj/schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "autholdprojbe1a78dc"
+    },
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      },
+      "perModelResolutionStrategy": [
+        {
+          "resolutionStrategy": {
+            "type": "OPTIMISTIC_CONCURRENCY"
+          },
+          "entityName": "Todo"
+        }
+      ]
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 7,
+        "apiKeyExpirationDate": "2021-11-26T19:20:16.548Z",
+        "keyDescription": "fgfdg"
+      },
+      {
+        "mode": "AWS_IAM"
+      },
+      {
+        "mode": "OPENID_CONNECT",
+        "openIDProviderName": "ffgfdgdfg",
+        "openIDIssuerURL": "https://google.com/",
+        "openIDClientID": "sadasdsa",
+        "openIDAuthTTL": "34",
+        "openIDIatTTL": "34"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "lambdaLayers": [],
+  "permissions": {
+    "auth": {
+      "oldprojbe1a78dc": [
+        "create"
+      ]
+    }
+  }
+}
